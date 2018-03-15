@@ -1,0 +1,74 @@
+<% include header %>
+
+	<div class = "panel panel-default">
+			<div class = "panel-heading">
+				<div>
+					Purple
+				</div>
+			</div> 
+	</div>
+	<div class = "panel panel-default">
+			<div class = "panel-heading">
+				<div>
+					Video Games
+				</div>
+			</div> 
+	</div>
+	<div class = "panel panel-default">		
+			<div class = "panel-heading">
+				<div>
+					Dogs
+				</div>
+			</div> 
+	</div>
+	<div class = "panel panel-default">
+			<div class = "panel-heading">
+				<div>
+					Psychology
+				</div>
+			</div> 
+	</div>
+	<div class = "panel panel-default">
+			<div class = "panel-heading">
+				<div>
+					Philosophy
+				</div>
+			</div> 
+	</div>
+	<div class = "panel panel-default">
+			<div class = "panel-heading">
+				<div>
+					Anime
+				</div>
+			</div> 
+	</div>
+	<div class = "panel panel-default">
+			<div class = "panel-heading">
+				<div>
+					Well-Behaved Cats
+				</div>
+			</div> 
+	</div>
+	<div class = "panel panel-default">
+			<div class = "panel-heading">
+				<div>
+					Geese, but not too many geese
+				</div>
+			</div> 
+	</div>
+	<% if(favs.length){ %>
+		<%favs.forEach(function(fav) {%>
+		<div class = "panel panel-default">
+			<div class = "panel-heading">
+				<div class = "text-muted pull-right">
+					<%= fav.published %>
+				</div>
+				<%= fav.title %>
+			</div> 
+		</div>
+		<% }) %>
+	<% } else { %>
+		No entries! <a href="/new-entry"> Add to list?</a>
+	<% } %>
+
+<% include footer %>
